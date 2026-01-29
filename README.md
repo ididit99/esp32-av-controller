@@ -1,16 +1,16 @@
-# ESP32 AV Controller 🎛️
+# ESP32 AV Controller
 
 **A friendly, web-based AV discovery and terminal tool for an ESP32.**
 
 ---
 
-## What is this? 💡
+## What is this?
 
 ESP32 AV Controller is a small, useful project that turns an ESP32 into a networked tool for discovering AV devices, capturing simple protocol traffic, and providing a web-based terminal and control UI. It uses LittleFS to host a lightweight web UI on the device and exposes a JSON API and WebSocket endpoints for realtime interaction.
 
 ---
 
-## Features ✅
+## Features
 
 - Web UI served from LittleFS (see `data/`) with websockets for live logs and terminal
 - Device discovery (subnet scan, SSDP), capture of traffic, and capture management
@@ -21,7 +21,7 @@ ESP32 AV Controller is a small, useful project that turns an ESP32 into a networ
 
 ---
 
-## Quick Start (Windows / PlatformIO) ⚙️
+## Quick Start (Windows / PlatformIO)
 
 Prerequisites:
 - PlatformIO (VS Code extension or `pio` CLI)
@@ -51,7 +51,7 @@ Notes:
 
 ---
 
-## How to use the web UI 🖥️
+## How to use the web UI
 
 - After boot, visit http://esp32-av-tool.local/ (mDNS) or http://<device-ip>/
 - The UI provides:
@@ -72,7 +72,7 @@ API endpoints (selected):
 
 ---
 
-## Project Layout 🔧
+## Project Layout
 
 - `src/` — C++ sources (networking, discovery, capture proxy, Web API, WiFi helper)
 - `include/` — headers and small notes
@@ -86,7 +86,7 @@ Key libs used (auto-installed by PlatformIO):
 
 ---
 
-## Development Notes & Tips 🛠️
+## Development Notes & Tips
 
 - Config and runtime state are stored in non-volatile Preferences (NVS). Device config (devices list, templates) is stored as JSON in preferences via `ConfigManager`.
 - WiFi defaults to an AP SSID of `ESP32-AV-Tool` when not set and enforces a minimum AP password length.
@@ -95,7 +95,7 @@ Key libs used (auto-installed by PlatformIO):
 
 ---
 
-## Troubleshooting ⚠️
+## Troubleshooting
 
 - LittleFS mount failure: ensure `uploadfs` was run and that `board_build.filesystem` is set to `littlefs`.
 - Can't reach the web UI: check serial logs for WiFi mode and IP. If using mDNS, try `http://<device-ip>/`.
@@ -103,7 +103,7 @@ Key libs used (auto-installed by PlatformIO):
 
 ---
 
-## Contributing & Contact 🤝
+## Contributing & Contact
 
 All contributions are welcome! Open an issue or a pull request with a short description of changes.
 If this repository is hosted on a platform (GitHub/GitLab), please file issues there for questions or bugs.
